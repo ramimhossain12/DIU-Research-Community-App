@@ -33,8 +33,8 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle("Login Page");
-        getSupportActionBar().setIcon(R.drawable.lock);
+
+        getSupportActionBar().setTitle(" Login Page");
         setContentView(R.layout.activity_login_admin);
         mAuth = FirebaseAuth.getInstance();
 
@@ -108,7 +108,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
                 progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     finish();
-                    Intent in = new Intent(LoginAdminActivity.this, ResearchUserActivity.class);
+                    Intent in = new Intent(LoginAdminActivity.this,ResearchUserActivity.class);
                     in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(in);
                 } else {

@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.researchapp.User.LoginAdminActivity;
+import com.example.researchapp.User.SiignUpActivity;
 
 public class ChooserActivity extends AppCompatActivity {
     private RadioButton optaion1, optaion2;
@@ -36,7 +37,7 @@ public class ChooserActivity extends AppCompatActivity {
                     startActivity(i);
                 } else if (optaion2.isChecked()) {
 
-                    Intent io = new Intent(ChooserActivity.this, LoginAdminActivity.class);
+                    Intent io = new Intent(ChooserActivity.this,LoginAdminActivity.class);
 
                     startActivity(io);
 

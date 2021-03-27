@@ -18,7 +18,7 @@ public class ResearchUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle("Research User DashBoard");
+        getSupportActionBar().setTitle("Dash_Board");
         setContentView(R.layout.activity_research_user);
 
 
