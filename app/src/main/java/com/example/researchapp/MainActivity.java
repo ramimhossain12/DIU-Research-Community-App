@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void startApp() {
 
 
-        Intent intent= new Intent(MainActivity.this, SiignUpActivity.class);
+        Intent intent= new Intent(MainActivity.this, ChooserActivity.class);
         startActivity(intent);
         finish();
     }

@@ -76,12 +76,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="32dp"
-                app:startIconDrawable="@drawable/person"
+                app:startIconDrawable="@drawable/email"
                 android:hint="Email"
                 app:helperTextEnabled="true"
                 app:counterEnabled="true"
@@ -110,7 +109,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="32dp"
-                app:startIconDrawable="@drawable/person"
+                app:startIconDrawable="@drawable/post"
                 android:hint="Depertment"
                 app:helperTextEnabled="true"
                 app:counterEnabled="true"

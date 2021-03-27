@@ -1,9 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".User.LoginAdminActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="32dp"
+            app:startIconDrawable="@drawable/email"
+            android:hint="Email"
+            app:helperTextEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="35"
+            app:endIconMode="clear_text"
+
+            app:helperTextTextColor="#2196F3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signInEmailEditTextID"
+                android:layout_height="wrap_content"
+                android:maxLength="35"
+                android:inputType="textEmailAddress"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="32dp"
+            app:startIconDrawable="@drawable/lock"
+            android:hint="Password"
+            app:helperTextEnabled="true"
+            app:counterEnabled="true"
+
+            app:counterMaxLength="8"
+            app:endIconMode="password_toggle"
+            app:helperTextTextColor="#000000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signInpasswordEditTextID"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                app:passwordToggleEnabled="true"
+                android:inputType="textPassword"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Forgot Password?"
+            android:textColor="#E9A031"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/signUpTextViewID"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#040404"
+            android:layout_marginLeft="20dp"
+            android:text="Sign Up !" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:id="@+id/signInButtonID"
+            android:background="@drawable/logshap"
+            android:layout_marginLeft="200dp"
+            android:text="Login" />
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbarID"
+        android:layout_width="wrap_content"
+        android:progressTint="#fff"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+
+</LinearLayout>
