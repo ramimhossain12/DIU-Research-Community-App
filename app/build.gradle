@@ -56,6 +56,19 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:20.3.0'
 
 
+
+
+    //image slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+
+    // recyclerview and cardview
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    //image Loader
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
