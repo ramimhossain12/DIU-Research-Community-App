@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.researchapp">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -8,6 +9,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,10 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResearchApp">
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".User.ResetPasswordActivity"></activity>
         <activity android:name=".User.LoginAdminActivity" />
         <activity android:name=".User.SiignUpActivity" />
-        <activity android:name=".Admin.SignUPActivity" />
         <activity android:name=".ResearchUserActivity" />
         <activity android:name=".ResearchAdminActivity" />
         <activity

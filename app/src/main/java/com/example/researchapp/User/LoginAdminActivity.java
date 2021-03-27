@@ -12,9 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.researchapp.DashBoardActivity;
-import com.example.researchapp.MainActivity2;
 import com.example.researchapp.R;
+import com.example.researchapp.ResearchUserActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -24,7 +23,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
 
     private static final int RC_SIGN_IN = 101;
     private EditText signInEmailEditText, signInPasswordEditText;
-    private TextView signUpTextView;
+    private TextView signUpTextView,restpass;
     private Button signInButton;
 
     private ProgressBar progressBar;
@@ -34,6 +33,8 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("Login Page");
+        getSupportActionBar().setIcon(R.drawable.lock);
         setContentView(R.layout.activity_login_admin);
         mAuth = FirebaseAuth.getInstance();
 
@@ -44,10 +45,12 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
         signUpTextView = findViewById(R.id.signUpTextViewID);
         signInButton = findViewById(R.id.signInButtonID);
         progressBar = findViewById(R.id.progressbarID);
+        restpass = findViewById(R.id.resetpassID);
 
 
         signUpTextView.setOnClickListener(this);
         signInButton.setOnClickListener(this);
+        restpass.setOnClickListener(this);
 
     }
 
@@ -64,6 +67,11 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
 
                 Intent intent = new Intent(getApplicationContext(), SiignUpActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.resetpassID:
+
+                Intent i = new Intent(LoginAdminActivity.this,ResetPasswordActivity.class);
+                startActivity(i);
                 break;
         }
     }
@@ -100,7 +108,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
                 progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     finish();
-                    Intent in = new Intent(LoginAdminActivity.this,MainActivity2.class);
+                    Intent in = new Intent(LoginAdminActivity.this, ResearchUserActivity.class);
                     in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(in);
                 } else {
