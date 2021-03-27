@@ -8,6 +8,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
+import com.example.researchapp.User.SiignUpActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private ProgressBar progressBar;
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void startApp() {
 
 
-        Intent intent= new Intent(MainActivity.this,DashBoardActivity.class);
+        Intent intent= new Intent(MainActivity.this, SiignUpActivity.class);
         startActivity(intent);
         finish();
     }

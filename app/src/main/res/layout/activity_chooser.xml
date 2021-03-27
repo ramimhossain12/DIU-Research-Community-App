@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/st"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    tools:context=".ChooserActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=" DIU Research Admin "
+                android:textSize="30sp"
+                />
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="DIU Research User"
+
+                android:textSize="30sp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="end">
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/submitID"
+            android:layout_width="240dp"
+            android:layout_height="300dp"
+            app:lottie_fileName="to.json"
+            android:backgroundTint="#fff"
+            android:scaleType="fitCenter"
+            app:lottie_autoPlay="true"
+            android:layout_marginBottom="66dp"
+            android:layout_centerInParent="true"
+            app:lottie_loop="true"/>
+
+
+    </LinearLayout>
+</LinearLayout>
