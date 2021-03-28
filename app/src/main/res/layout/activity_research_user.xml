@@ -434,7 +434,7 @@
                 android:layout_width="160dp"
                 android:layout_height="190dp"
                 android:layout_margin="10dp"
-                android:id="@+id/ee"
+                android:id="@+id/barcode"
                 android:layout_gravity="center"
                 android:foreground="?android:selectableItemBackground"
                 android:clickable="true">

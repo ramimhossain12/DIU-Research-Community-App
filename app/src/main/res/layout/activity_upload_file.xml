@@ -24,13 +24,5 @@
         android:text="Upload PDF"/>
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:gravity="center"
-        android:onClick="btn_action"
-        android:id="@+id/btn_TestID"
-        android:text="View CLick"/>
 
 </LinearLayout>

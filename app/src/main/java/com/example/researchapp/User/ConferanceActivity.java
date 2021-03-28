@@ -14,7 +14,7 @@ import com.example.researchapp.R;
 
 public class ConferanceActivity extends AppCompatActivity {
 
-    private WebView webView;
+    private WebView webView1;
 
     private ProgressBar progressBarconfer;
 
@@ -31,10 +31,10 @@ public class ConferanceActivity extends AppCompatActivity {
 
 
 
-        webView.loadUrl("https://sciencex.wpninjathemes.com/conferences-and-talks/");
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebChromeClient(new WebChromeClient() {
+        webView1.loadUrl("https://sciencex.wpninjathemes.com/conferences-and-talks/");
+        webView1.getSettings().setJavaScriptEnabled(true);
+        webView1.setWebChromeClient(new WebChromeClient());
+        webView1.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 progressBarconfer.setVisibility(View.VISIBLE);
