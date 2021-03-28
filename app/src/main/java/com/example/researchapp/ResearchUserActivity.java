@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.researchapp.User.ConferanceActivity;
 import com.example.researchapp.User.JournalActivity;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class ResearchUserActivity extends AppCompatActivity {
     ImageSlider imageSlider;
 
 
-    CardView researupload,publication,jornal;
+    CardView researupload,publication,jornal, confran;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class ResearchUserActivity extends AppCompatActivity {
          researupload = findViewById(R.id.ResearchUploadID);
          publication = findViewById(R.id.publicationResearchID);
          jornal = findViewById(R.id.jornalarticaleID);
-
+         confran = findViewById(R.id.confranceID);
         //for image slider.............
         imageSlider = findViewById(R.id.slider1);
         List<SlideModel> slideModels=new ArrayList<>();
@@ -69,6 +70,15 @@ public class ResearchUserActivity extends AppCompatActivity {
             public void onClick(View v) {
                Intent intent = new Intent(ResearchUserActivity.this, JournalActivity.class);
                startActivity(intent);
+            }
+        });
+
+
+        confran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResearchUserActivity.this,ConferanceActivity.class);
+                startActivity(intent);
             }
         });
 
