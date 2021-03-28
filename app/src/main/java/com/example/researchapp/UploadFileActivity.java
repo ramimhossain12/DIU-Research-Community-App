@@ -100,4 +100,9 @@ public class UploadFileActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void btn_action(View view) {
+
+        startActivity(new Intent(getApplicationContext(),RetriveFileActivity.class));
+    }
 }
