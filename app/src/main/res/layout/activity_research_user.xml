@@ -344,7 +344,7 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
-                    android:id="@+id/objIDd"
+                    android:id="@+id/noteID"
                     android:foreground="?android:selectableItemBackground"
                     android:clickable="true">
                     <LinearLayout

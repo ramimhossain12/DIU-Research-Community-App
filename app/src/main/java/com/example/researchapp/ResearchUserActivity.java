@@ -11,6 +11,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.researchapp.User.ConferanceActivity;
 import com.example.researchapp.User.JournalActivity;
+import com.example.researchapp.User.NoteActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class ResearchUserActivity extends AppCompatActivity {
     ImageSlider imageSlider;
 
 
-    CardView researupload,publication,jornal, confran;
+    CardView researupload,publication,jornal, confran, note;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class ResearchUserActivity extends AppCompatActivity {
          publication = findViewById(R.id.publicationResearchID);
          jornal = findViewById(R.id.jornalarticaleID);
          confran = findViewById(R.id.confranceID);
+         note = findViewById(R.id.noteID);
         //for image slider.............
         imageSlider = findViewById(R.id.slider1);
         List<SlideModel> slideModels=new ArrayList<>();
@@ -78,6 +80,14 @@ public class ResearchUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ResearchUserActivity.this,ConferanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        note.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResearchUserActivity.this, NoteActivity.class);
                 startActivity(intent);
             }
         });

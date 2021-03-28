@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResearchApp">
-        <activity android:name=".User.ConferanceActivity"></activity>
+        <activity android:name=".User.NoteActivity"></activity>
+        <activity android:name=".User.ConferanceActivity" />
         <activity android:name=".User.JournalActivity" />
         <activity android:name=".RetriveFileActivity" />
         <activity android:name=".UploadFileActivity" />
