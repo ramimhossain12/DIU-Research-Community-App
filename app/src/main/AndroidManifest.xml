@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResearchApp">
-        <activity android:name=".User.BarcodeActivity"></activity>
+        <activity android:name=".PDFBOOK.ThirdBookActivity"></activity>
+        <activity android:name=".PDFBOOK.SecondBookActivity" />
+        <activity android:name=".PDFBOOK.FirstBookActivity" />
+        <activity android:name=".User.BookActivity" />
+        <activity android:name=".User.BarcodeActivity" />
         <activity android:name=".User.NoteActivity" />
         <activity android:name=".User.ConferanceActivity" />
         <activity android:name=".User.JournalActivity" />

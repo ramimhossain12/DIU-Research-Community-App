@@ -10,6 +10,7 @@ import android.view.View;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.researchapp.User.BarcodeActivity;
+import com.example.researchapp.User.BookActivity;
 import com.example.researchapp.User.ConferanceActivity;
 import com.example.researchapp.User.JournalActivity;
 import com.example.researchapp.User.NoteActivity;
@@ -23,7 +24,7 @@ public class ResearchUserActivity extends AppCompatActivity {
     ImageSlider imageSlider;
 
 
-    CardView researupload,publication,jornal, confran, note,barcode;
+    CardView researupload,publication,jornal, confran, note,barcode,book;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +34,14 @@ public class ResearchUserActivity extends AppCompatActivity {
 
          //find card view
 
+         book = findViewById(R.id.bookID);
          researupload = findViewById(R.id.ResearchUploadID);
          publication = findViewById(R.id.publicationResearchID);
          jornal = findViewById(R.id.jornalarticaleID);
          confran = findViewById(R.id.confranceID);
          note = findViewById(R.id.noteID);
          barcode = findViewById(R.id.barcode);
+
         //for image slider.............
         imageSlider = findViewById(R.id.slider1);
         List<SlideModel> slideModels=new ArrayList<>();
@@ -98,6 +101,13 @@ public class ResearchUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ResearchUserActivity.this, BarcodeActivity.class);
+                startActivity(intent);
+            }
+        });
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResearchUserActivity.this, BookActivity.class);
                 startActivity(intent);
             }
         });
