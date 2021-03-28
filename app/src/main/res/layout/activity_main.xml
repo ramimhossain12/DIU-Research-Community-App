@@ -7,18 +7,53 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="wc.json"
+        app:lottie_loop="true" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_fileName="code.json"
-        android:scaleType="fitCenter"
-        app:lottie_autoPlay="true"
+        android:layout_height="450dp"
         android:layout_centerInParent="true"
-        app:lottie_loop="true"/>
+        android:scaleType="fitCenter"
+        android:layout_marginTop="22dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="code.json"
+        app:lottie_loop="true" />
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/op"
+        android:gravity="bottom"
+        android:layout_marginStart="33dp"
+        android:paddingLeft="22dp"
+        android:text="Daffodil Internationl University"
+        android:textColor="#2196F3"
+        android:textSize="33sp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/op"
+        android:paddingLeft="99dp"
+        android:text="Research Group "
+        android:gravity="end"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textSize="33sp" />
 
     <ProgressBar
         android:id="@+id/progreesbarID"

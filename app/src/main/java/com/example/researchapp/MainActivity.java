@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (progress=20;progress<=100;progress=progress+20){
             try {
-                Thread.sleep(100); //1500
+                Thread.sleep(1500); //1500
                 progressBar.setProgress(progress);
             } catch (InterruptedException e) {
                 e.printStackTrace();

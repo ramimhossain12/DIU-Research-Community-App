@@ -39,7 +39,7 @@ public class ConferanceActivity extends AppCompatActivity {
             public void onProgressChanged(WebView view, int newProgress) {
                 progressBarconfer.setVisibility(View.VISIBLE);
                 progressBarconfer.setProgress(newProgress);
-                setTitle("Conferences ");
+
                 progressDialog.show();
                 if (newProgress ==100){
                     progressBarconfer.setVisibility(View.GONE);

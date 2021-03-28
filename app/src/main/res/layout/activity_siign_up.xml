@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     android:background="#FB689A"
+     android:background="#EABA29"
     android:orientation="vertical"
     tools:context=".User.SiignUpActivity">
 
@@ -21,12 +21,19 @@
             android:orientation="vertical"
             android:padding="24dp">
 
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView1"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="190dp"
+                android:layout_centerInParent="true"
+                android:padding="33dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="sign.json"
+                app:lottie_loop="true" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/padlock"
-                android:layout_gravity="center"/>
 
 
             <TextView
@@ -37,8 +44,9 @@
                 android:text="@string/register_text"
                 android:textColor="#000000"
                 android:textSize="30sp"
+                android:fontFamily="@font/op"
                 android:drawableRight="@drawable/dbarrow"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginBottom="32dp"/>
 
 
@@ -216,7 +224,7 @@
                 android:textColor="#FFFFFF"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginTop="20dp"
+
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:text="@string/already_registred_login_me"/>
@@ -227,6 +235,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 android:layout_gravity="center"
+
                 android:id="@+id/progressbarID"/>
 
         </LinearLayout>

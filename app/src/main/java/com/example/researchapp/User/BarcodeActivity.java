@@ -29,9 +29,7 @@ public class BarcodeActivity extends AppCompatActivity implements ZXingScannerVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle("BarCode Scanner");
         setContentView(R.layout.activity_barcode);
-
 
 
 

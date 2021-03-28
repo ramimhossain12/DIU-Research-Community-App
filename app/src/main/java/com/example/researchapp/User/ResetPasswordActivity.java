@@ -24,8 +24,6 @@ public class ResetPasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setTitle("Reset Page");
-        getSupportActionBar().setIcon(R.drawable.lock);
         setContentView(R.layout.activity_reset_password);
 
 
