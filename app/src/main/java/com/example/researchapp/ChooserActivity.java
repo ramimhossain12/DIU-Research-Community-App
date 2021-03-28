@@ -33,7 +33,7 @@ public class ChooserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (optaion1.isChecked()) {
 
-                    Intent i = new Intent(ChooserActivity.this, ResearchAdminActivity.class);
+                    Intent i = new Intent(ChooserActivity.this, UploadFileActivity.class);
                     startActivity(i);
                 } else if (optaion2.isChecked()) {
 
