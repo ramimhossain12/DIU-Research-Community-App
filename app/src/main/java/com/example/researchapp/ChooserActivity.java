@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.researchapp.User.JournalActivity;
 import com.example.researchapp.User.LoginAdminActivity;
 import com.example.researchapp.User.SiignUpActivity;
 
@@ -33,7 +34,7 @@ public class ChooserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (optaion1.isChecked()) {
 
-                    Intent i = new Intent(ChooserActivity.this, UploadFileActivity.class);
+                    Intent i = new Intent(ChooserActivity.this, ResearchAdminActivity.class);
                     startActivity(i);
                 } else if (optaion2.isChecked()) {
 

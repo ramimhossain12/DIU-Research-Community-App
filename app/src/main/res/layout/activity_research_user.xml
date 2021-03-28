@@ -144,7 +144,7 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
-                    android:id="@+id/objID"
+                    android:id="@+id/ResearchUploadID"
                     android:foreground="?android:selectableItemBackground"
                     android:clickable="true">
                     <LinearLayout
@@ -187,7 +187,7 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
-                    android:id="@+id/objI33"
+                    android:id="@+id/publicationResearchID"
                     android:foreground="?android:selectableItemBackground"
                     android:clickable="true">
                     <LinearLayout
@@ -243,7 +243,7 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
-                    android:id="@+id/objID44"
+                    android:id="@+id/jornalarticaleID"
                     android:foreground="?android:selectableItemBackground"
                     android:clickable="true">
                     <LinearLayout

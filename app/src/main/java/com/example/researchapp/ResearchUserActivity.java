@@ -1,11 +1,15 @@
 package com.example.researchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.researchapp.User.JournalActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +19,20 @@ public class ResearchUserActivity extends AppCompatActivity {
     //image slider
     ImageSlider imageSlider;
 
+
+    CardView researupload,publication,jornal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Dash_Board");
         setContentView(R.layout.activity_research_user);
 
+
+         //find card view
+
+         researupload = findViewById(R.id.ResearchUploadID);
+         publication = findViewById(R.id.publicationResearchID);
+         jornal = findViewById(R.id.jornalarticaleID);
 
         //for image slider.............
         imageSlider = findViewById(R.id.slider1);
@@ -34,5 +46,31 @@ public class ResearchUserActivity extends AppCompatActivity {
         slideModels.add(new SlideModel ("https://images.pexels.com/photos/212286/pexels-photo-212286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "Research Plan"));
 
         imageSlider.setImageList(slideModels,true);
+
+        researupload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent o = new Intent(ResearchUserActivity.this,UploadFileActivity.class);
+                startActivity(o);
+            }
+        });
+
+
+        publication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent p = new Intent(ResearchUserActivity.this,RetriveFileActivity.class);
+                startActivity(p);
+            }
+        });
+
+        jornal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(ResearchUserActivity.this, JournalActivity.class);
+               startActivity(intent);
+            }
+        });
+
     }
 }
