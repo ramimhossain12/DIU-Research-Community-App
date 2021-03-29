@@ -158,10 +158,15 @@ public class ResearchUserActivity extends AppCompatActivity {
         } else if (id == R.id.aboutId) {
             Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);
+
+
+
+
+        }
+        else  if (id == R.id.notificanId){
+            Intent intent = new Intent(this, NotificationActivity.class);
+            startActivity(intent);
             return true;
-
-
-
         }
 
         return super.onOptionsItemSelected(item);
