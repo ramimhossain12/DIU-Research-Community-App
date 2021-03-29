@@ -1,10 +1,14 @@
 package com.example.researchapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -112,5 +116,54 @@ public class ResearchUserActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
+    }
+
+    //menu item find
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+    //menu item selected
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (item.getItemId() == R.id.ShareId) {
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/type");
+            String subject = "Note_Book app";
+            String body = "This app  is very useful .\n com.example.notepad";
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+            intent.putExtra(Intent.EXTRA_TEXT, body);
+            startActivity(Intent.createChooser(intent, "share with"));
+
+
+        } else if (item.getItemId() == R.id.feedbackID) {
+           // Intent intent = new Intent(getApplicationContext(), DeveloperFeedbackActivity.class);
+           // startActivity(intent);
+
+
+        } else if (id == R.id.aboutId) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+            return true;
+
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

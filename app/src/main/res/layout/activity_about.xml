@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/about"
+    tools:context=".AboutActivity">
+
+
+
+    <TextView
+
+        android:id="@+id/textID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:text= "MD.Ramim Hossain"
+        android:textColor="#000000"
+        android:textSize="35sp"
+
+        android:textStyle="bold" />
+
+
+    <TextView
+
+        android:id="@+id/textID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="2dp"
+        android:text= "Email:ramim.cse.info@gmail.com"
+        android:autoLink="email"
+        android:textColorLink="#3F51B5"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textViewID"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+
+        android:gravity="center"
+        android:layout_marginBottom="33dp"
+        android:text="@string/about_t"
+        android:textColor="#009688"
+        android:textSize="20sp"
+          />
+    <TextView
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:gravity="center"
+        android:text="Version Number : 1.0.1"
+        android:layout_gravity="center"
+        android:textColor="#373A3A"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView1"
+        android:layout_width="190dp"
+        android:layout_gravity="left"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:padding="33dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="ab.json"
+        app:lottie_loop="true" />
+</LinearLayout>
