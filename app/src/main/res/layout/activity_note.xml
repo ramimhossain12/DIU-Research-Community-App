@@ -5,79 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
-    android:background="#4CAF50"
+    android:background="#FFFFFF"
+    android:padding="5dp"
     tools:context=".User.NoteActivity">
-
 
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/ff"
-        android:gravity="center_horizontal"
-        android:text="Sticky Notes "
         android:textAlignment="center"
-        android:textColor="#000000"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+
+        android:fontFamily="@font/ff"
+        android:text="Welcome To Diary"
+        android:textColor="#E91E63"
+        android:gravity="center_horizontal" />
+
+
+
 
     <EditText
-        android:id="@+id/editTextID3"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="17dp"
-        android:background="#FFFFFF"
-        android:gravity="start"
-        android:hint="Subject :"
-        android:lines="16"
-        android:padding="10dp"
-        android:textColor="#160F0F"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-    <EditText
-        android:id="@+id/editTextID2"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="17dp"
-        android:background="#FFFFFF"
-        android:gravity="start"
-        android:hint="Date :"
-        android:lines="16"
-        android:padding="10dp"
-        android:textColor="#160F0F"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-    <EditText
-        android:id="@+id/editTextID"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="17dp"
-        android:background="#FFFFFF"
-        android:hint="Note......."
-        android:gravity="start"
-        android:lines="16"
-        android:padding="10dp"
-        android:textColor="#160F0F"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <Button
-
-        android:id="@+id/saveButtonID"
-        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/logshap"
-        android:backgroundTint="#FFC107"
-        android:gravity="center"
-        android:textSize="22dp"
-        android:text="Save"
+        android:textSize="18sp"
+        android:padding="30dp"
+        android:textStyle="bold"
+
+        android:gravity="start"
+        android:background="#131313"
+        android:layout_marginTop="17dp"
         android:textColor="#FFFFFF"
+        android:lines="16"
+
+        android:id="@+id/editTextID"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
 
 
-        />
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButtonID"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/brt_shape"
+            android:backgroundTint="#FFFFFF"
+            android:text="Save"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonID"
+            android:backgroundTint="#E41B1B"
+            android:text="Clear"
+            android:textStyle="italic"
+            android:background="@drawable/brt_shape"
+            android:textColor="#BD1111"
+            style="@style/Widget.AppCompat.Button.Colored">
+
+
+
+
+        </Button>
+
+
+
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

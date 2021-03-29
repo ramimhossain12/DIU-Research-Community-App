@@ -1,9 +1,16 @@
 package com.example.researchapp.User;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,11 +25,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class NoteActivity extends AppCompatActivity {
+public class NoteActivity extends AppCompatActivity implements  View.OnClickListener {
 
     //    Button
-    private EditText editText, editText2,editText3;
-    private Button savebutton;
+    private EditText editText;
+    private Button savebutton,exitButton;
+    private android.app.AlertDialog.Builder alertDialogBuilder;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,40 +40,50 @@ public class NoteActivity extends AppCompatActivity {
 
 
 
+
 //find the button
         editText = findViewById(R.id.editTextID);
         savebutton = findViewById(R.id.saveButtonID);
-        editText2 = findViewById(R.id.editTextID2);
-        editText3 = findViewById(R.id.editTextID3);
+        exitButton = findViewById(R.id.buttonID);
+        exitButton.setOnClickListener(this);
 
 
+//on clickListener
         savebutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String  text = editText.getText().toString();
-                String text2 = editText2.getText().toString();
-                String text3 = editText2.getText().toString();
-                if (text!=null){
-                    writeToFIle(text);
-                }
-                if (text2!=null){
-                    writeToFIle2(text2);
-                }
-                if (text3!=null){
-                    writeToFIle3(text3);
-                }
-                else {
+            public void onClick(View view) {
+
+
+                String text = editText.getText().toString();
+
+                if(text!=null){
+
+
+                    writeToFile(text);
+
+
+
+
+                }else{
                     Toast.makeText(getApplicationContext(),"Please enter some data",Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        readFromFile();
+        readfFromFile();
+
+
     }
 
 
 
-    private void writeToFIle(String text) {
+
+
+
+
+
+    public  void writeToFile(String text){
+
 
         try {
             FileOutputStream fileOutputStream = openFileOutput("Note.text", Context.MODE_PRIVATE);
@@ -79,43 +98,10 @@ public class NoteActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+
     }
-
-    private void writeToFIle2(String text2) {
-
-        try {
-            FileOutputStream fileOutputStream = openFileOutput("Note.text2", Context.MODE_PRIVATE);
-            try {
-                fileOutputStream.write(text2.getBytes());
-                fileOutputStream.close();
-                Toast.makeText(getApplicationContext(),"  Note saved ",Toast.LENGTH_SHORT).show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void writeToFIle3(String text3) {
-
-        try {
-            FileOutputStream fileOutputStream = openFileOutput("Note.text3", Context.MODE_PRIVATE);
-            try {
-                fileOutputStream.write(text3.getBytes());
-                fileOutputStream.close();
-                Toast.makeText(getApplicationContext(),"  Note saved ",Toast.LENGTH_SHORT).show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void readFromFile() {
+    public  void readfFromFile(){
 
         try {
             FileInputStream fileInputStream = openFileInput("Note.text");
@@ -130,14 +116,86 @@ public class NoteActivity extends AppCompatActivity {
             }
 
             editText.setText(stringBuffer.toString());
-            editText2.setText(stringBuffer.toString());
-            editText3.setText(stringBuffer.toString());
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+
+    }
+
+
+    //back button click
+    @Override
+    public void onBackPressed() {
+
+        androidx.appcompat.app.AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want Exit ?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+
+                        NoteActivity.super.onBackPressed();
+                    }
+                })
+
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+
+    }
+
+
+    // alertdilog
+
+    @Override
+    public void onClick(View v) {
+
+        alertDialogBuilder = new android.app.AlertDialog.Builder(NoteActivity.this);
+        alertDialogBuilder.setTitle(R.string.title_Text);
+
+        alertDialogBuilder.setMessage(R.string.message_Text);
+
+        alertDialogBuilder.setIcon(R.drawable.pic);
+
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.cancel();
+
+            }
+        });
+
+
+        alertDialogBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Toast.makeText(NoteActivity.this,"You have clicked on cancel button",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        android.app.AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
     }
 }
+
