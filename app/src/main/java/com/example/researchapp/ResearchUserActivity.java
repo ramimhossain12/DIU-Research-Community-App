@@ -144,15 +144,15 @@ public class ResearchUserActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/type");
             String subject = "Note_Book app";
-            String body = "This app  is very useful .\n com.example.notepad";
+            String body = "This app  is very useful .\n com.example.researchapp";
             intent.putExtra(Intent.EXTRA_SUBJECT, subject);
             intent.putExtra(Intent.EXTRA_TEXT, body);
             startActivity(Intent.createChooser(intent, "share with"));
 
 
         } else if (item.getItemId() == R.id.feedbackID) {
-           // Intent intent = new Intent(getApplicationContext(), DeveloperFeedbackActivity.class);
-           // startActivity(intent);
+            Intent intent = new Intent(getApplicationContext(), DeveloperFeedbackActivity.class);
+            startActivity(intent);
 
 
         } else if (id == R.id.aboutId) {

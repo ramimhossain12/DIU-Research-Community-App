@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/feed"
+    tools:context=".DeveloperFeedbackActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feed Back"
+        android:textColor="#000000"
+        android:fontFamily="@font/gotham"
+        android:layout_marginTop="130dp"
+        android:textSize="35sp"
+        android:layout_gravity="center"/>
+    <RatingBar
+        android:id="@+id/rattingbarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@android:color/black"
+        android:progressTint="#FF9800"
+        android:rating="2"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/ratingtextViewIDI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/nameEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter your name "
+        android:textSize="17sp"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/massegeEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:hint="Enter your feedback "
+        android:textColorHint="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+         <com.google.android.material.button.MaterialButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Clear"
+             android:background="#2196F3"
+             android:backgroundTint="#03A9F4"
+             android:layout_marginRight="44dp"
+             android:id="@+id/clearButtonID"
+             android:textSize="20sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/sendButtonID"
+            android:textSize="20sp"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

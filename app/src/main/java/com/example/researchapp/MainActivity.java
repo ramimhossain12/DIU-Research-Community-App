@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
+import com.example.researchapp.User.LoginAdminActivity;
 import com.example.researchapp.User.SiignUpActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private void startApp() {
 
 
-        Intent intent= new Intent(MainActivity.this, ChooserActivity.class);
+        Intent intent= new Intent(MainActivity.this, LoginAdminActivity.class);
         startActivity(intent);
         finish();
     }
