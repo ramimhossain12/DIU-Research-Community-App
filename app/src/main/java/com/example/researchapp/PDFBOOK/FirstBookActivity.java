@@ -1,8 +1,8 @@
 package com.example.researchapp.PDFBOOK;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.researchapp.R;
 import com.github.barteksc.pdfviewer.PDFView;

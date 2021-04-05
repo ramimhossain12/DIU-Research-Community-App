@@ -1,8 +1,7 @@
 package com.example.researchapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.researchapp.R
+import androidx.appcompat.app.AppCompatActivity
 
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

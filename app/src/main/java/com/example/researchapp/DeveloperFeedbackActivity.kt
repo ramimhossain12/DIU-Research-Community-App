@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import java.lang.Exception
 
 class DeveloperFeedbackActivity : AppCompatActivity(),View.OnClickListener {
 

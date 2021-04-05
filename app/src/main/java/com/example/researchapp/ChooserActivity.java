@@ -1,16 +1,14 @@
 package com.example.researchapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.researchapp.User.JournalActivity;
 import com.example.researchapp.User.LoginAdminActivity;
-import com.example.researchapp.User.SiignUpActivity;
 
 public class ChooserActivity extends AppCompatActivity {
     private RadioButton optaion1, optaion2;

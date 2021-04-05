@@ -1,15 +1,14 @@
 package com.example.researchapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.researchapp.User.LoginAdminActivity;
-import com.example.researchapp.User.SiignUpActivity;
 
 public class MainActivity extends AppCompatActivity {
 
