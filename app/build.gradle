@@ -37,14 +37,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-
     //lottie animation
     implementation 'com.airbnb.android:lottie:3.3.1'
     //degain view
 
     implementation 'com.google.android.material:material:1.0.0'
-
 
     //FireBase
     implementation 'com.google.firebase:firebase-auth:19.4.0'
@@ -55,8 +52,8 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:6.2.0'
     implementation 'com.google.firebase:firebase-messaging:20.3.0'
 
-
-
+    //google Sign in
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
     //image slider
     implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
