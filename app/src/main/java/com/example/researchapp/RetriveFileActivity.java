@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RetriveFileActivity extends AppCompatActivity {
+
+    SearchView searchView;
     ListView myPDFListView;
     DatabaseReference databaseReference;
     List<uploadPDF> uploadPDFS;
@@ -35,7 +38,7 @@ public class RetriveFileActivity extends AppCompatActivity {
 
 
 
-
+        searchView = findViewById(R.id.searchviewID);
         myPDFListView = findViewById(R.id.MyListView);
         uploadPDFS = new ArrayList<>();
 
@@ -54,6 +57,8 @@ public class RetriveFileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
     private void viewALlFIles() {
@@ -85,6 +90,19 @@ public class RetriveFileActivity extends AppCompatActivity {
                         return view;
                     }
                 };
+                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+
+                        adapter.getFilter().filter(newText);
+                        return false;
+                    }
+                });
                 myPDFListView.setAdapter(adapter);
 
             }
@@ -94,5 +112,11 @@ public class RetriveFileActivity extends AppCompatActivity {
 
             }
         });
+
     }
+
+
+
+
+
 }
