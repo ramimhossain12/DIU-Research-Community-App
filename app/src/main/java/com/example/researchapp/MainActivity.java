@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void startApp() {
 
 
-        Intent intent= new Intent(MainActivity.this, LoginAdminActivity.class);
+        Intent intent= new Intent(MainActivity.this, ResearchUserActivity.class);
         startActivity(intent);
         finish();
     }

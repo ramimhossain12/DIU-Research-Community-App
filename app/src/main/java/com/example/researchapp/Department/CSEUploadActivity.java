@@ -1,4 +1,8 @@
-package com.example.researchapp;
+package com.example.researchapp.Department;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,10 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.researchapp.R;
+import com.example.researchapp.RetriveFileActivity;
+import com.example.researchapp.UploadFileActivity;
+import com.example.researchapp.uploadPDF;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
@@ -22,25 +26,24 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class UploadFileActivity extends AppCompatActivity {
-    EditText editPDFName;
-    Button btn_upload;
+public class CSEUploadActivity extends AppCompatActivity {
+    private EditText editPDFName;
+    private Button btn_upload;
     //Firebase Storage
-    StorageReference storageReference ;
+    StorageReference storageReference;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload_file);
-
-
+        setContentView(R.layout.activity_cseupload);
 
         editPDFName = findViewById(R.id.text_pdfName);
         btn_upload= findViewById(R.id.btn_upload);
 
 
         storageReference = FirebaseStorage.getInstance().getReference();
-        databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
+        databaseReference = FirebaseDatabase.getInstance().getReference("cseuploads");
 
 
         btn_upload.setOnClickListener(new View.OnClickListener() {
@@ -49,8 +52,9 @@ public class UploadFileActivity extends AppCompatActivity {
                 selectPDFFile();
             }
         });
-
     }
+
+
 
     private void selectPDFFile() {
         Intent intent = new Intent();
@@ -77,7 +81,7 @@ public class UploadFileActivity extends AppCompatActivity {
         progressDialog.setTitle("Uploading File Please Wait.....");
         progressDialog.show();
 
-        StorageReference reference = storageReference.child("uploads/"+System.currentTimeMillis()+".pdf");
+        StorageReference reference = storageReference.child("cseuploads/"+System.currentTimeMillis()+".pdf");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -87,7 +91,7 @@ public class UploadFileActivity extends AppCompatActivity {
                         Uri url = uri.getResult();
                         uploadPDF uploadPDF = new uploadPDF(editPDFName.getText().toString(),url.toString());
                         databaseReference.child(databaseReference.push().getKey()).setValue(uploadPDF);
-                        Toast.makeText(UploadFileActivity.this,"File Uploaded Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CSEUploadActivity.this,"File Uploaded Successfully",Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }
                 }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -103,6 +107,6 @@ public class UploadFileActivity extends AppCompatActivity {
 
     public void btn_action(View view) {
 
-        startActivity(new Intent(getApplicationContext(),RetriveFileActivity.class));
+        startActivity(new Intent(getApplicationContext(), CSERetriveActivity.class));
     }
 }

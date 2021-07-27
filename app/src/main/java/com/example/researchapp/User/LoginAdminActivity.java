@@ -67,20 +67,20 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
 
 
 
-        googleSignIn = findViewById(R.id.googleID);
+
         signInEmailEditText = findViewById(R.id.signInEmailEditTextID);
         signInPasswordEditText = findViewById(R.id.signInpasswordEditTextID);
 
-        signUpTextView = findViewById(R.id.signUpTextViewID);
+
         signInButton = findViewById(R.id.signInButtonID);
         progressBar = findViewById(R.id.progressbarID);
         restpass = findViewById(R.id.resetpassID);
 
 
-        signUpTextView.setOnClickListener(this);
+
         signInButton.setOnClickListener(this);
         restpass.setOnClickListener(this);
-        googleSignIn.setOnClickListener(this);
+
 
 
 
@@ -97,20 +97,14 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
                 userLogin();
                 break;
 
-            case R.id.signUpTextViewID:
 
-                Intent intent = new Intent(getApplicationContext(), SiignUpActivity.class);
-                startActivity(intent);
-                break;
             case R.id.resetpassID:
 
                 Intent i = new Intent(LoginAdminActivity.this,ResetPasswordActivity.class);
                 startActivity(i);
                 break;
 
-            case R.id.googleID:
-                signID();
-                break;
+        
         }
     }
 

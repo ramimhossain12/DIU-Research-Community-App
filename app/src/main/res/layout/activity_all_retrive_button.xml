@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Department.AllRetriveButtonActivity">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Choose"
+        android:fontFamily="@font/op"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:inputType="textAutoComplete"
+        app:backgroundTint="#36383E"
+        android:layout_marginTop="33dp"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/csebtn_retrive"
+        android:text="Show  CSE Research Paper"/>
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:inputType="textAutoComplete"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/eeebtn_retrive"
+        app:backgroundTint="#00BCD4"
+        android:text="Show  EEE Research Paper"/>
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:inputType="textAutoComplete"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/civilbtn_retrive"
+        app:backgroundTint="#F44336"
+        android:text="Show  Civil Research Paper"/>
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:inputType="textAutoComplete"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/pharmacybtn_retrive"
+        app:backgroundTint="#2196F3"
+        android:text="Show  Pharmacy Research Paper"/>
+
+</LinearLayout>

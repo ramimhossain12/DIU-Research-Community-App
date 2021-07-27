@@ -13,6 +13,10 @@ import androidx.cardview.widget.CardView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.researchapp.Department.AllButtonActivity;
+import com.example.researchapp.Department.AllRetriveButtonActivity;
+import com.example.researchapp.Department.CSERetriveActivity;
+import com.example.researchapp.Department.CSEUploadActivity;
 import com.example.researchapp.User.BarcodeActivity;
 import com.example.researchapp.User.BookActivity;
 import com.example.researchapp.User.ConferanceActivity;
@@ -28,7 +32,7 @@ public class ResearchUserActivity extends AppCompatActivity {
     ImageSlider imageSlider;
 
 
-    CardView researupload,publication,jornal, confran, note,barcode,book;
+    CardView researupload,publication,jornal, confran, note,barcode,book,cse ,cseretrive;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,8 @@ public class ResearchUserActivity extends AppCompatActivity {
          confran = findViewById(R.id.confranceID);
          note = findViewById(R.id.noteID);
          barcode = findViewById(R.id.barcode);
+         cse = findViewById(R.id.cse);
+         cseretrive = findViewById(R.id.cseretrive);
 
         //for image slider.............
         imageSlider = findViewById(R.id.slider1);
@@ -62,7 +68,7 @@ public class ResearchUserActivity extends AppCompatActivity {
         researupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent o = new Intent(ResearchUserActivity.this,UploadFileActivity.class);
+                Intent o = new Intent(ResearchUserActivity.this, AllButtonActivity.class);
                 startActivity(o);
             }
         });
@@ -71,7 +77,7 @@ public class ResearchUserActivity extends AppCompatActivity {
         publication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent p = new Intent(ResearchUserActivity.this,RetriveFileActivity.class);
+                Intent p = new Intent(ResearchUserActivity.this, AllRetriveButtonActivity.class);
                 startActivity(p);
             }
         });
@@ -116,6 +122,21 @@ public class ResearchUserActivity extends AppCompatActivity {
             }
         });
 
+        cse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResearchUserActivity.this, CSEUploadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cseretrive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResearchUserActivity.this, CSERetriveActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
