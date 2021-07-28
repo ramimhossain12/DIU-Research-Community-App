@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSERetriveActivity extends AppCompatActivity {
-   private SearchView searchView;
+    private SearchView searchView;
     ListView myPDFListView;
     DatabaseReference databaseReference;
     List<uploadPDF> uploadPDFS;
@@ -114,10 +114,6 @@ public class CSERetriveActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-
 
 
 }
