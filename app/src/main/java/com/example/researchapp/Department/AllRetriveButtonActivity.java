@@ -31,6 +31,30 @@ public class AllRetriveButtonActivity extends AppCompatActivity {
             }
         });
 
+        civilre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AllRetriveButtonActivity.this,CivilRetriveActivity.class);
+                startActivity(i);
+            }
+        });
+        eeere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AllRetriveButtonActivity.this,EeeRetriveActivity.class);
+                startActivity(i);
+            }
+        });
+        pharre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AllRetriveButtonActivity.this,PharmacyRetriveActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
 
     }
 }

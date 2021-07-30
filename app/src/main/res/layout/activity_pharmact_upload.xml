@@ -35,7 +35,6 @@
         app:counterEnabled="true"
         app:counterMaxLength="35"
         app:endIconMode="clear_text"
-
         app:helperTextTextColor="#2196F3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -56,16 +55,16 @@
 
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="355dp"
         android:layout_height="55dp"
         android:textColor="#FFC107"
         android:gravity="center"
         android:layout_gravity="center"
         android:background="@drawable/logshap"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:id="@+id/btn_upload"
         android:inputType="textAutoComplete"
-        android:text="Upload Your CSE Research Paper"/>
+        android:text="Upload Your Pharmacy Research Paper"/>
 
 
 </LinearLayout>

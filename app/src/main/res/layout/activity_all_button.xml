@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".Department.AllButtonActivity">
 
@@ -19,40 +20,40 @@
    android:gravity="center"/>
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="367dp"
         android:layout_height="60dp"
         android:textColor="#FFFFFF"
         android:inputType="textAutoComplete"
         android:gravity="center"
         android:layout_marginTop="33dp"
         android:layout_gravity="center"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:id="@+id/csebtn_upload"
         android:text="Upload Your CSE Research Paper"/>
 
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="367dp"
         android:layout_height="60dp"
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_marginTop="2dp"
         android:inputType="textAutoComplete"
         android:layout_gravity="center"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:id="@+id/eeebtn_upload"
         app:backgroundTint="#FF9800"
         android:text="Upload Your EEE Research Paper"/>
 
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="367dp"
         android:layout_height="60dp"
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_marginTop="2dp"
         android:layout_gravity="center"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:id="@+id/civilbtn_upload"
         android:inputType="textAutoComplete"
         app:backgroundTint="#8BC34A"
@@ -60,13 +61,13 @@
 
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="367dp"
         android:layout_height="60dp"
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:layout_marginTop="2dp"
         android:layout_gravity="center"
-        android:textSize="15sp"
+        android:textSize="13sp"
        android:inputType="textAutoComplete"
         android:id="@+id/pharmacybtn_upload"
         app:backgroundTint="#FF5722"

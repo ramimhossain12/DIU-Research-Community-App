@@ -64,7 +64,7 @@
         android:textSize="15sp"
         android:id="@+id/btn_upload"
         android:inputType="textAutoComplete"
-        android:text="Upload Your CSE Research Paper"/>
+        android:text="Upload Your Civil Research Paper"/>
 
 
 </LinearLayout>
