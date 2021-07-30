@@ -31,5 +31,29 @@ public class AllButtonActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+
+        eee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(AllButtonActivity.this,EeeUploadActivity.class);
+                startActivity(in);
+            }
+        });
+
+        civil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(AllButtonActivity.this,CivilUploadActivity.class);
+                startActivity(in);
+            }
+        });
+
+        pharmacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(AllButtonActivity.this,PharmactUploadActivity.class);
+                startActivity(in);
+            }
+        });
     }
 }
